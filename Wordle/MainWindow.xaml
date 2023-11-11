@@ -1,0 +1,24 @@
+﻿<Window x:Class="Wordle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wordle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="830" Width="630">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Name="canvas" Height="800"/>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="NumberBox" Width="50" FontSize="20" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button Content="RESTART" Width="150" Height="50" Click="RestartClick" FontSize="20" FontWeight="Bold"/>
+            </StackPanel>
+            <Button Content="SET" Width="200" Height="50" Click="SetClick" FontSize="20" FontWeight="Bold"/>
+            <StackPanel Margin="10" Name="WordsStackPanel"/>
+        </StackPanel>
+    </Grid>
+</Window>
